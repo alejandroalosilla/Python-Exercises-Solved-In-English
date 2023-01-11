@@ -1,0 +1,15 @@
+#  Ex083 - Create a program where the user types any expression that uses parentheses.
+#  Your application must analyze whether the passed expression has the
+# open and closed parentheses in the correct order.
+
+expression = str(input('Enter an expression: ')).strip().replace(' ', '')
+
+expression_elements = list()
+
+for counter in range(0, len(expression)):
+    expression_elements.append(expression[counter])
+
+if (expression_elements.count('(') + expression_elements.count(')')) % 2 == 0:
+    print('Your expression is valid!')
+else:
+    print('Your expression is invalid!')
